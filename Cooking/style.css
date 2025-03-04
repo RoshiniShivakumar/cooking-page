@@ -1,0 +1,164 @@
+/* 🌟 General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff7043, #ffcc80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 🍽️ Chat Header - Floating Style */
+.chat-header {
+    /* width: 91%; */
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 112, 67, 0.9);
+    padding: 10px 50px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 💬 Chat Messages - Bubble Design */
+.chat-box {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+/* 🤖 Bot Message Styling */
+.bot-message {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 12px 18px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 75%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: flex-start;
+    position: relative;
+}
+
+/* 🔵 Bot Speech Tail */
+.bot-message::after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* 👤 User Message Styling */
+.user-message {
+    background: rgba(0, 150, 136, 0.9);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 75%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: flex-end;
+    position: relative;
+}
+
+/* 🟢 User Speech Tail */
+.user-message::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* ✏️ Chat Input Field - Rounded & Stylish */
+.chat-input {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 20px;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 30px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* 🔘 Send Button */
+.chat-input button {
+    background: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* 🔘 Hover & Click Effect */
+.chat-input button:hover {
+    background: #d84315;
+    transform: scale(1.05);
+}
+
+/* 🧑‍🍳 Floating Chef Icon */
+.chef-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    animation: bounce 2s infinite;
+}
+
+/* 🔄 Small Animation */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* 📱 Mobile Responsiveness */
+@media (max-width: 600px) {
+    .chat-box {
+        height: 350px;
+    }
+    
+    .chat-input {
+        bottom: 10px;
+    }
+}
+/* 🔥 Logo in Header */
+.chat-input img {
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
