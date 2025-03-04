@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipe ChatBot</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <img src="image1.png" alt="image1">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>🍽️ Cooking Chatbot</h2>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <p class="bot-message">👋 Hello! What would you like to cook today?</p>
+            </div>
+            <div class="chat-input">
+                <img src="image3.png" alt="logo">
+                <input type="text" id="search-box" placeholder="Ask me a recipe...">
+                <button id="search-btn" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    
+        <div id="results"></div>
+        <div id="instructions"></div>
+
+        <!-- <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+        <script src="../static/chatbox.js"></script> -->
+</html>
